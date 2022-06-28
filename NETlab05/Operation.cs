@@ -9,15 +9,30 @@ namespace NETlab05
     class Operation
     {
         private IOperator _operator;
-        public Operation(IOperator Operatorr)
+        public Operation(string Operatorr)
         {
-            _operator = Operatorr;
+
+            switch (Operatorr)
+            {
+                case "*":
+                    _operator = new Multiplication();
+                    break;
+                case "/":
+                    _operator = new Division();
+                    break;
+                case "+":
+                    _operator = new Addition();
+                    break;
+                case "-":
+                    _operator = new Subtraction();
+                    break;
+            };
         }
         public void SetStrategy(IOperator Operatorr)
         {
             _operator = Operatorr;
         }
-        public float useOperator(string left, string right)
+        public string useOperator(string left, string right)
         {
             float floatLeft = float.Parse(left);
             float floatRight = float.Parse(right);

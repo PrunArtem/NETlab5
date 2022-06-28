@@ -8,6 +8,6 @@ namespace NETlab05
 {
     interface IOperator
     {
-        float calculate(float left, float right);
+        string calculate(float left, float right);
     }
 }

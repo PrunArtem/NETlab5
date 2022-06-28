@@ -8,9 +8,9 @@ namespace NETlab05
 {
     class Multiplication : IOperator
     {
-        public float calculate(float left, float right)
+        public string calculate(float left, float right)
         {
-            return left * right;
+            return (left * right).ToString();
         }
     }
 }
