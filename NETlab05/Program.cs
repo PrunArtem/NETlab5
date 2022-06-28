@@ -10,7 +10,16 @@ namespace NETlab05
     {
         static void Main(string[] args)
         {
-
+            try
+            {
+                AlgorithmParse algo = new AlgorithmParse(Console.ReadLine());
+                Console.WriteLine(algo.getExpression());
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+            Console.ReadKey();
         }
     }
 }
